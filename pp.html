@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/infoStyle.css" />
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Medsite</title>
+  </head>
+  <body>
+    <div class="medsite_container">
+      <header>
+        <span class="logo">
+          <img src="img/logo.png" alt="" /><br />
+          <h3>Astana Wellness Center</h3>
+        </span>
+        <div class="nav-bar">
+          <ul>
+            <li><a href="medsite.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li>
+              <button id="openModalBtn" class="openModalBtn">
+                Request Callback
+              </button>
+            </li>
+            <div class="dropdown">
+              <p>Appointment Online</p>
+              <span class="left-icon"></span>
+              <span class="right-icon"></span>
+              <div class="items">
+                <a href="#" style="--i: 1"><span></span>Adrologist</a>
+                <a href="#" style="--i: 2"><span></span>Endocrinologist</a>
+                <a href="#" style="--i: 3"><span></span>Urologist</a>
+                <a href="#" style="--i: 4"><span></span>Genicologist</a>
+                <a href="#" style="--i: 5"><span></span>Therapist</a>
+              </div>
+            </div>
+          </ul>
+        </div>
+
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Request Callback</h2>
+            <div class="column">
+              <label for="phoneNumber">Phone Number:</label><br />
+              <input
+                type="text"
+                id="phoneNumber"
+                name="phoneNumber"
+                placeholder="+7 (xxx) xxx-xx-xx "
+              />
+            </div>
+
+            <div class="column">
+              <label for="callbackTime">Callback Time:</label><br />
+              <input type="date" id="callbackDate" name="callbackDate" />
+            </div>
+
+            <button id="submitCallbackBtn" class="modalBtn">Submit</button>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <div class="info_container">
+          <h1 class="text-center mb-4">Welcome to Astana Pediatric Clinic</h1>
+          <p>
+            At Astana Pediatric Clinic, we are dedicated to providing
+            comprehensive and compassionate care for infants, children, and
+            adolescents. Our team of board-certified pediatricians and caring
+            staff are committed to ensuring the health and well-being of your
+            child.
+          </p>
+          <h2 id="about">About Us</h2>
+          <p>
+            Our clinic was founded with the mission of delivering high-quality
+            medical care in a child-friendly environment. We offer a wide range
+            of services, including well-child exams, immunizations, sick visits,
+            developmental screenings, and more.
+          </p>
+          <p>
+            In addition to medical care, we strive to educate parents and
+            empower families to make informed decisions about their children's
+            health. We believe in fostering open communication and building
+            lasting relationships with our patients and their families.
+          </p>
+          <h2>Latest News and Updates</h2>
+          <p>
+            <strong>New Vaccination Guidelines:</strong> The American Academy of
+            Pediatrics has updated its vaccination guidelines to include
+            recommendations for the COVID-19 vaccine for children ages 5 and
+            older. Contact our clinic to schedule your child's vaccination
+            appointment today.
+          </p>
+          <p>
+            <strong>Flu Season Preparedness:</strong> With flu season
+            approaching, it's important to ensure your child is up-to-date on
+            their flu vaccine. Our clinic offers flu shots for children of all
+            ages. Schedule your appointment now to protect your family against
+            the flu.
+          </p>
+          <p>
+            <strong>Back-to-School Checkups:</strong> As the new school year
+            begins, don't forget to schedule your child's annual checkup. Our
+            pediatricians can provide school physicals, sports physicals, and
+            immunizations to help your child start the year healthy and ready to
+            learn.
+          </p>
+          <p>
+            <strong>Healthy Eating Habits:</strong> Encouraging healthy eating
+            habits from a young age is essential for your child's growth and
+            development. Our pediatricians can offer guidance on nutrition and
+            provide resources to help you make nutritious food choices for your
+            family.
+          </p>
+          <p>
+            <strong>Parenting Tips:</strong> Looking for parenting advice? Check
+            out our blog for helpful tips on everything from newborn care to
+            managing temper tantrums. Our pediatricians are here to support you
+            on your parenting journey.
+          </p>
+          <p>
+            Whether it's a routine checkup or treatment for an illness, our team
+            is here to provide the personalized care your child deserves.
+            Schedule an appointment with us today and experience the difference
+            at Astana Pediatric Clinic.
+          </p>
+        </div>
+      </main>
+
+      <footer class="medsite_footer">
+        <div class="info">
+          <p>&copy; 2024 Astana Wellness Center. All rights reserved.</p>
+          <h5>
+            MCS-2201: <br />
+            Gizatov Asylbek and Zhaksybaev Nurtas
+          </h5>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      function emptyPage() {
+        window.location.href = "empty.html";
+      }
+
+      const dropdown = document.querySelector(".dropdown");
+
+      dropdown.addEventListener("click", () => {
+        dropdown.classList.toggle("active");
+      });
+      window.onload = function () {
+        document.querySelector("main").classList.add("show");
+
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("openModalBtn");
+        var span = document.getElementsByClassName("close")[0];
+        var callbackDateInput = document.getElementById("callbackDate");
+        var phoneNumberInput = document.getElementById("phoneNumber");
+        var submitCallbackBtn = document.getElementById("submitCallbackBtn");
+
+        submitCallbackBtn.onclick = function () {
+          if (
+            phoneNumberInput.value.trim() !== "" &&
+            callbackDateInput.value.trim() !== ""
+          ) {
+            alert("Your data has been submitted!");
+            modal.style.display = "none";
+          } else {
+            alert("Please fill in all fields");
+          }
+        };
+
+        btn.onclick = function () {
+          modal.style.display = "block";
+        };
+
+        span.onclick = function () {
+          modal.style.display = "none";
+        };
+
+        calendarIcon.onclick = function () {
+          callbackDateInput.click();
+        };
+
+        callbackDateInput.onchange = function () {
+          var selectedDate = new Date(callbackDateInput.value);
+          var formattedDate = selectedDate.toLocaleDateString("en-GB");
+          callbackTimeInput.placeholder = formattedDate + ", --:--";
+        };
+
+        window.onclick = function (event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        };
+      };
+    </script>
+  </body>
+</html>

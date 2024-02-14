@@ -1,0 +1,581 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+      background-image: url('/img/awc.png');
+     background-repeat: no-repeat;
+     overflow-y: scroll;
+     background-size: cover;
+     scroll-behavior: smooth;
+     filter: contrast(2);
+}
+.medsite_container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header{
+    background: #006B3C;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    margin-bottom: 10%;
+}
+
+
+header .logo img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    margin-left: 65px;
+    background-size: cover;
+}
+
+header .logo h3 {
+    margin-left: 10px;
+    color: white; 
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+}
+
+header .nav-bar{
+    position: absolute;
+    margin-left: 15%;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+}
+
+header .nav-bar ul{
+    display: flex;
+    list-style: none;
+}
+
+header .nav-bar li{
+    margin-right: 15px;
+    align-items: baseline;
+}
+
+header .nav-bar a{
+    text-decoration: none;
+    color: white; 
+    font-size: 20px;
+}
+
+header .openModalBtn{
+    border: none;
+    width: 120px;
+    height: 25px;
+    border-radius: 10px;
+    font-size: 12px;
+    background: white;
+    color: #006B3C;
+    transition: .3s ease-in;
+    font-weight: 600;
+}
+header .openModalBtn:hover{
+    transform: scale(0.96);
+}
+
+header .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+}
+
+header .modal-content {
+    background-color: rgba(0, 0, 0, 0.686);
+    margin: 10% auto;
+    padding: 20px;
+    color: white;
+    height: 250px;
+    display: flexbox;
+    border-radius: 12px;
+    width: 80%;
+    position: relative;
+}
+
+header .modal-content .column{
+    padding-top: 20px;
+    padding-bottom: 50px;
+    font-family: "Roboto Condensed", sans-serif;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+header .modal-content h2{
+    font-family: "Exo 2", sans-serif;
+    font-weight: 600;
+    margin-left: 50px;
+}
+
+header .modal-content .column input{
+    width: 200px;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    padding-left: 15px;
+    margin-left: 25px;
+}
+
+header .modal-content .modalBtn{
+    position: absolute;
+    bottom: 25px;
+    margin-left: 60px;
+    width: 150px;
+    font-size: 18px;
+    height: 25px;
+    border: none;
+
+}
+
+header .close {
+    color: #aaa;
+    float: right;
+    position: absolute;
+    justify-self: center;
+    align-self: center;
+    right: 40px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+header .close:hover,
+header .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+header .dropdown {
+    position: absolute;
+    left: 40vw;
+    width: 200px;
+    height: 30px;
+    background: white;
+    bottom: 1%;
+    color: #000;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+header .dropdown .left-icon,
+header .dropdown .right-icon {
+    position: relative;
+    display: inline-block;
+    width: 10px;
+    height: 5px;
+    background: #006B3C;
+    border-radius: 40px;
+    transition: .5s;
+}
+
+header .dropdown .left-icon {
+    left: 7px;
+    transform: rotate(45deg);
+}
+
+header .dropdown.active .left-icon {
+    transform: rotate(135deg);
+}
+
+header .dropdown .right-icon {
+    transform: rotate(-45deg);
+}
+
+header .dropdown.active .right-icon {
+    transform: rotate(-135deg);
+}
+
+header .dropdown .items {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: auto;
+    margin-top: 33px;
+    overflow: hidden;
+    visibility: hidden;
+    transition: .5s;
+}
+
+header .dropdown.active .items {
+    visibility: visible;
+}
+
+header .dropdown .items a {
+    position: relative;
+    left: 100%;
+    display: flex;
+    font-size: 20px;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 10px 15px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+    transition-delay: calc(60ms * var(--i));
+}
+
+header .dropdown.active .items a {
+    left: 0;
+}
+
+header .dropdown .items a:hover {
+    color: #fff;
+}
+
+header .dropdown .items a span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: green;
+    z-index: -1;
+    border-radius: inherit;
+    transform: rotate(160deg);
+    transform-origin: right;
+    transition: .5s;
+}
+
+header .dropdown .items a:hover span {
+    transform: rotate(0deg);
+}
+
+
+  
+  main.show {
+    opacity: 1; 
+  }
+main{
+    display: flex;
+    position: relative;
+    height: auto;
+    justify-content: center;
+    opacity: 0; 
+    height: 100vh;
+    transition: opacity 1.3s ease-in-out; 
+}
+main .book h3{
+    position: relative;
+    top: -15%;
+    font-size: 24px;
+    color: white;
+    left: 5%;
+}
+main .row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+main .book{
+    display: flexbox;
+    font-family: "Exo 2", sans-serif;
+    align-items: center;
+    height: 400px;
+    position: absolute;
+    width: 85%;
+    padding-top: 80px;
+    flex: 1;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(51, 51, 51, 0.359);
+    margin: 0;
+}
+
+main .input-container {
+    width: 50%;
+    max-width: 400px;
+    margin: 10px;
+  }
+ main .input-container input {
+    max-width: 400px;
+    width: 95%;
+    border-radius: 5px;
+    border: none;
+    height: 35px;
+    font-family: "Roboto Condensed", sans-serif;
+    padding-left: 20px;
+    margin-top: 5px;
+  }
+  main .input-container select{
+    max-width: 400px;
+    width: 95%;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 5px;
+  }
+
+  main .submitBtn{
+    position: absolute;
+    bottom: 40px;
+    width: 200px;
+    color: white;
+    border: none;
+    border-radius: 5px 5px 0 0 ;
+    background: transparent;
+    border-bottom: 3px solid snow;
+    height: 30px;
+    left: 100px;
+    font-family: "Roboto Condensed", sans-serif;
+    transition: .5s ease-in;
+  }
+
+  main .submitBtn:hover{
+    background: snow;
+    color: black;
+    border-radius: 5px;
+    transform: scale(0.95);
+  }
+
+
+  main .book label{
+    color: snow;
+    font-size: 20px;
+
+  }
+
+
+
+  .wrapper {
+    margin-top: 50%;
+    overflow: hidden;
+    position: relative;
+    max-width: 70%;
+    align-self: center;
+    margin-bottom: 40%;
+    z-index: 999;
+}
+
+.wrapper i {
+    top: 50%;
+    height: 50px;
+    width: 80px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    z-index: 1;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    color: #000;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+}
+
+
+@media screen and (max-width: 900px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper .carousel {
+        grid-auto-columns: 100%;
+    }
+}
+.wrapper i:active {
+  transform: translateY(-50%) scale(0.85);
+}
+
+  .wrapper i:first-child{
+    left: -12px;
+  }
+  .wrapper i:last-child{
+    right: -12px;
+  }
+  .wrapper .carousel{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) + 50px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 120px;
+    height: 300px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+  .carousel.no-transition {
+    scroll-behavior: auto;
+  }
+  .carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+  }
+  .carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+  }
+  .carousel :where(.card, .img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .carousel .card {
+    scroll-snap-align: start;
+    height: 342px;
+    list-style: none;
+    background: #fff;
+    cursor: pointer;
+    padding-bottom: 15px;
+    flex-direction: column;
+    border-radius: 8px;
+  }
+  .carousel .card:hover::after {
+    content: 'PRESS TO LOCATE'; 
+    font-family: "Roboto Condensed", sans-serif;
+    color: #006B3C;
+    font-style: italic;
+    font-weight: 500;
+  }
+  .carousel .card .img {
+    background: #006B3C;
+    height: 148px;
+    object-fit: cover;
+    width: 148px;
+    align-items: center;
+    border-radius: 50%;
+  }
+
+  .card .img img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  .carousel .card h2 {
+    font-weight: 500;
+    font-size: 1.56rem;
+    margin: 30px 0 5px;
+  }
+  .carousel .card span {
+    color: #6A6D78;
+    font-size: 1.31rem;
+  }
+
+  article {
+    position: absolute;
+    bottom: 0;
+    padding-top: 20%;
+    margin-top: 10%;
+    margin-left: 2.5%;
+    display: flex;
+    padding-right: 50px;
+  }
+  article .article_container {
+    width: 400px;
+    height: 200px;
+    background: snow;
+    font-family: "Roboto Condensed", sans-serif;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    justify-content: center;
+    border-radius: 12px;
+    margin: 12px;
+    transition: .4s ease-out;
+  }
+
+  article .article_container:hover{
+    transform: scale(0.90);
+  }
+
+  article .article_container h3{
+    padding-bottom: 15px;
+    font-size: 20px;
+    font-weight: 700;
+    position: relative;
+    top: -20px;
+  }
+  article .article_container a{
+    text-decoration: none;
+    outline: none;
+    position: relative;
+    top: 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #006B3C;
+    font-weight: 600;
+    transition: .3s ease-in-out;
+  }
+
+  article .article_container a:hover{
+    text-decoration: underline;
+  }
+
+  article .article_container p{
+    font-size: 16px;
+    font-style:unset;
+    font-weight: 500;
+    text-transform: initial;
+
+  }
+
+
+  footer {
+    background: #006B3C;
+    position: relative;
+    margin-top: 5%;
+    display: flex;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    background-size: cover;
+    justify-content: center;
+    background-repeat: no-repeat;
+    text-align: center;
+
+  }
+
+  
+
+  footer .info{
+    text-align: center;
+    height: 100px;
+    top: 30px;
+  padding: 20px;
+    color: snow;
+    display: flexbox;
+    align-self: center;
+    justify-content: start;
+    font-family: "Ubuntu", sans-serif;
+
+  }
+
+  footer .info p{
+    padding-bottom: 20px;
+  }
+  

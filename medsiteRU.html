@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/medsite.css" />
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Medsite</title>
+  </head>
+  <div class="medsite_container">
+    <header>
+      <span class="logo">
+        <img src="img/logo.png" alt="" /><br />
+        <h3>Астана Велнес Центр</h3>
+      </span>
+      <div class="nav-bar">
+        <ul>
+          <li><a href="medsite.html">Главная</a></li>
+          <li><a href="about.html">О нас</a></li>
+          <li>
+            <button id="openModalBtn" class="openModalBtn">
+              Обратный звонок
+            </button>
+          </li>
+
+          <div class="dropdown">
+            <p>Онлайн Запись</p>
+            <span class="left-icon"></span>
+            <span class="right-icon"></span>
+            <div class="items">
+              <a href="#" style="--i: 1"><span></span>Андролог</a>
+              <a href="#" style="--i: 2"><span></span>Эндокринолог</a>
+              <a href="#" style="--i: 3"><span></span>Уролог</a>
+              <a href="#" style="--i: 4"><span></span>Гинеколог</a>
+              <a href="#" style="--i: 5"><span></span>Терапевт</a>
+            </div>
+          </div>
+        </ul>
+      </div>
+      <button
+        style="
+          position: absolute;
+          right: 50px;
+          color: black;
+          width: 30px;
+          height: 30px;
+          border-radius: 20px;
+          border: none;
+          outline: none;
+          background: white;
+        "
+        onclick="window.location.href = 'medsite.html'"
+      >
+        EN
+      </button>
+
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>ЗОбратный звонок</h2>
+          <div class="column">
+            <label for="phoneNumber">Номер телефона:</label><br />
+            <input
+              type="text"
+              id="phoneNumber"
+              name="phoneNumber"
+              placeholder="+7 (xxx) xxx-xx-xx "
+            />
+          </div>
+
+          <div class="column">
+            <label for="callbackTime">Время обратного звонка:</label><br />
+            <input type="date" id="callbackDate" name="callbackDate" />
+          </div>
+
+          <button id="submitCallbackBtn" class="modalBtn">Отправить</button>
+        </div>
+      </div>
+    </header>
+    
+    <main>
+      <div class="book">
+        <h3>ЗАПИСАТЬСЯ НА ПРИЕМ</h3>
+        <div class="row">
+          <div class="input-container">
+            <label for="Patient">Имя пациента</label>
+            <input type="text" id="Patient" name="Patient" />
+          </div>
+
+          <div class="input-container">
+            <label for="Doctor">Имя врача</label>
+            <select id="selectOption" name="Choose Doctor">
+              <option value="doctor">Выберите врача</option>
+              <option value="doctor1">Жексен Кадырбек</option>
+              <option value="doctor2">Асель Усыпова</option>
+              <option value="doctor3">Ерке Жанболатова</option>
+            </select>
+          </div>
+
+          <div class="input-container">
+            <label for="Department">Выбор отделения:</label>
+            <select id="selectOption" name="Choose Doctor">
+              <option value="department">Выберите отделение</option>
+              <option value="department1">Педиатрия</option>
+              <option value="department2">Отоларингология</option>
+              <option value="department3">Эндокринология</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-container">
+            <label for="input4">Номер телефона</label>
+            <input type="number" id="phoneNumber" name="phoneNumber" />
+          </div>
+
+          <div class="input-container">
+            <label for="input5">Симптомы</label>
+            <input type="text" id="input5" name="input5" />
+          </div>
+
+          <div class="input-container">
+            <label for="input6">Выберите дату</label>
+            <input type="date" id="callbackDate" name="callbackDate" />
+          </div>
+        </div>
+        <button class="submitBtn">Отправить сейчас</button>
+      </div>
+      <br />
+      <div class="wrapper">
+        <i id="left" class="fa-solid fa-angle-left"></i>
+        <ul class="carousel">
+          <li class="card" onclick="window.location.href = 'ComprehensiveCancer.html'">
+            <div class="img">
+              <img src="img/ne.png" alt="img" draggable="false" />
+            </div>
+            <h2>Комплексное лечение рака</h2>
+          </li>
+          <li class="card" onclick="window.location.href = 'nucSurgery.html'">
+            <div class="img">
+              <img src="img/de.png" alt="img" draggable="false" />
+            </div>
+            <h2>Ядерная хирургия</h2>
+          </li>
+          <li class="card" onclick="window.location.href = 'Pediatr.html'">
+            <div class="img">
+              <img src="img/pe.png" alt="img" draggable="false" />
+            </div>
+            <h2>Педиатрия</h2>
+          </li>
+          <li class="card" onclick="window.location.href = 'Otolar.html'">
+            <div class="img">
+              <img src="img/ot.png" alt="img" draggable="false" />
+            </div>
+            <h2>Отоларингология</h2>
+          </li>
+          <li class="card" onclick="window.location.href = 'wo.html'">
+            <div class="img">
+              <img src="img/wo.png" alt="img" draggable="false" />
+            </div>
+            <h2>Здоровье женщин</h2>
+          </li>
+          <li class="card" onclick="window.location.href = 'me.html'">
+            <div class="img">
+              <img src="img/ma.png" alt="img" draggable="false" />
+            </div>
+            <h2>Здоровье мужчин</h2>
+          </li>
+          <li class="card" onclick="window.location.href = 'gastrit.html'">
+            <div class="img">
+              <img src="img/ga.png" alt="img" draggable="false" />
+            </div>
+            <h2>Здоровье желудочно-кишечного тракта</h2>
+          </li>
+          <li class="card" onclick="window.location.href = 'cardio.html'">
+            <div class="img">
+              <img src="img/he.png" alt="img" draggable="false" />
+            </div>
+            <h2>Сердечно-сосудистая помощь</h2>
+          </li>
+          <li class="card" onclick="window.location.href = 'endoc.html'">
+            <div class="img">
+              <img src="img/en.png" alt="img" draggable="false" />
+            </div>
+            <h2>Эндокринология</h2>
+          </li>
+          <li class="card" onclick="window.location.href = 'rehabilit.html'">
+            <div class="img">
+              <img src="img/re.png" alt="img" draggable="false" />
+            </div>
+            <h2>Реабилитация</h2>
+          </li>
+          <li class="card" onclick="window.location.href = 'dental.html'">
+            <div class="img">
+              <img src="img/do.png" alt="img" draggable="false" />
+            </div>
+            <h2>Стоматология</h2>
+          </li>
+          <li class="card" onclick="window.location.href = 'neirolog.html'">
+            <div class="img">
+              <img src="img/no.png" alt="img" draggable="false" />
+            </div>
+            <h2>Неврология</h2>
+          </li>
+        </ul>
+        <i id="right" class="fa-solid fa-angle-right"></i>
+      </div>
+      <article>
+        <div class="article_container">
+            <h3>Уход невролога</h3>
+            <p>
+              изменение какой-то формы, внесенное юмором,<br>
+               или случайные слова, которые совсем не похожи на реальные <br>
+              убедитесь, что нет ничего
+            </p>
+            <a href="">Читать далее</a>
+          </div>
+          <div class="article_container">
+            <h3>Глазной Уход</h3>
+            <p>
+              изменение какой-то формы, внесенное юмором,<br>
+               или случайные слова, которые совсем не похожи на реальные <br>
+              убедитесь, что нет ничего
+            </p>
+            <a href="">Читать далее</a>
+          </div>
+          <div class="article_container">
+            <h3>Педиатрическая клиника</h3>
+            <p>
+              изменение какой-то формы, внесенное юмором,<br>
+               или случайные слова, которые совсем не похожи на реальные <br>
+              убедитесь, что нет ничего
+            </p>
+            <a href="">Читать далее</a>
+          </div>
+          <div class="article_container">
+            <h3>Родительская забота</h3>
+            <p>
+              изменение какой-то формы, внесенное юмором,<br>
+               или случайные слова, которые совсем не похожи на реальные <br>
+              убедитесь, что нет ничего
+            </p>
+            <a href="">Читать далее</a>
+          </div>
+      </article>
+    </main>
+
+    <footer class="medsite_footer">
+      <div class="info">
+        <p>&copy; 2024 Астана Велнес Центр. Все права защищены.</p>
+        <h5>
+          MCS-2201: <br />
+          Гизатов Асылбек и Жаксыбаев Нуртас
+        </h5>
+      </div>
+    </footer>
+  </div>
+    <script>
+
+        const dropdown = document.querySelector(".dropdown");
+  
+        dropdown.addEventListener("click", () => {
+          dropdown.classList.toggle("active");
+        });
+        window.onload = function () {
+          
+          document.querySelector("main").classList.add("show");
+  
+          var modal = document.getElementById("myModal");
+          var btn = document.getElementById("openModalBtn");
+          var span = document.getElementsByClassName("close")[0];
+          var callbackDateInput = document.getElementById("callbackDate");
+          var phoneNumberInput = document.getElementById("phoneNumber");
+          var submitCallbackBtn = document.getElementById("submitCallbackBtn");
+  
+          submitCallbackBtn.onclick = function () {
+            if (
+              phoneNumberInput.value.trim() !== "" &&
+              callbackDateInput.value.trim() !== ""
+            ) {
+              alert("Your data has been submitted!");
+              modal.style.display = "none";
+            } else {
+              alert("Please fill in all fields");
+            }
+          };
+  
+          btn.onclick = function () {
+            modal.style.display = "block";
+          };
+  
+          span.onclick = function () {
+            modal.style.display = "none";
+          };
+  
+          calendarIcon.onclick = function () {
+            callbackDateInput.click();
+          };
+  
+          callbackDateInput.onchange = function () {
+            var selectedDate = new Date(callbackDateInput.value);
+            var formattedDate = selectedDate.toLocaleDateString("en-GB");
+            callbackTimeInput.placeholder = formattedDate + ", --:--";
+          };
+  
+          window.onclick = function (event) {
+            if (event.target == modal) {
+              modal.style.display = "none";
+            }
+          };
+        };
+  
+        const wrapper = document.querySelector(".wrapper");
+        const carousel = document.querySelector(".carousel");
+        const firstCardWidth = carousel.querySelector(".card").offsetWidth;
+        const arrowBtns = document.querySelectorAll(".wrapper i");
+        const carouselChildrens = [...carousel.children];
+  
+        let isDragging = false,
+          isAutoPlay = true,
+          startX,
+          startScrollLeft,
+          timeoutId;
+  
+        let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
+  
+        carouselChildrens
+          .slice(-cardPerView)
+          .reverse()
+          .forEach((card) => {
+            carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
+          });
+  
+        carouselChildrens.slice(0, cardPerView).forEach((card) => {
+          carousel.insertAdjacentHTML("beforeend", card.outerHTML);
+        });
+  
+        carousel.classList.add("no-transition");
+        carousel.scrollLeft = carousel.offsetWidth;
+        carousel.classList.remove("no-transition");
+  
+        arrowBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        carousel.scrollLeft += btn.id === "left" ? -firstCardWidth : firstCardWidth;
+      });
+    });
+  
+    
+  
+        const dragStart = (e) => {
+          isDragging = true;
+          carousel.classList.add("dragging");
+          startX = e.pageX;
+          startScrollLeft = carousel.scrollLeft;
+        };
+  
+        const dragging = (e) => {
+          if (!isDragging) return;
+          carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
+        };
+  
+        const dragStop = () => {
+          isDragging = false;
+          carousel.classList.remove("dragging");
+        };
+  
+        const infiniteScroll = () => {
+          if (carousel.scrollLeft === 0) {
+            carousel.classList.add("no-transition");
+            carousel.scrollLeft = carousel.scrollWidth - 2 * carousel.offsetWidth;
+            carousel.classList.remove("no-transition");
+          } else if (
+            Math.ceil(carousel.scrollLeft) ===
+            carousel.scrollWidth - carousel.offsetWidth
+          ) {
+            carousel.classList.add("no-transition");
+            carousel.scrollLeft = carousel.offsetWidth;
+            carousel.classList.remove("no-transition");
+          }
+  
+          clearTimeout(timeoutId);
+          if (!wrapper.matches(":hover")) autoPlay();
+        };
+  
+       
+  
+        carousel.addEventListener("mousedown", dragStart);
+        carousel.addEventListener("mousemove", dragging);
+        document.addEventListener("mouseup", dragStop);
+        carousel.addEventListener("scroll", infiniteScroll);
+        wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
+      </script>
+</body>
+</html>

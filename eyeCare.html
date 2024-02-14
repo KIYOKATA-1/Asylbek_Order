@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/infoStyle.css" />
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Medsite</title>
+  </head>
+  <body>
+    <div class="medsite_container">
+      <header>
+        <span class="logo">
+          <img src="img/logo.png" alt="" /><br />
+          <h3>Astana Wellness Center</h3>
+        </span>
+        <div class="nav-bar">
+          <ul>
+            <li><a href="medsite.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li>
+              <button id="openModalBtn" class="openModalBtn">
+                Request Callback
+              </button>
+            </li>
+            <div class="dropdown">
+              <p>Appointment Online</p>
+              <span class="left-icon"></span>
+              <span class="right-icon"></span>
+              <div class="items">
+                <a href="#" style="--i: 1"><span></span>Adrologist</a>
+                <a href="#" style="--i: 2"><span></span>Endocrinologist</a>
+                <a href="#" style="--i: 3"><span></span>Urologist</a>
+                <a href="#" style="--i: 4"><span></span>Genicologist</a>
+                <a href="#" style="--i: 5"><span></span>Therapist</a>
+              </div>
+            </div>
+          </ul>
+        </div>
+
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Request Callback</h2>
+            <div class="column">
+              <label for="phoneNumber">Phone Number:</label><br />
+              <input
+                type="text"
+                id="phoneNumber"
+                name="phoneNumber"
+                placeholder="+7 (xxx) xxx-xx-xx "
+              />
+            </div>
+
+            <div class="column">
+              <label for="callbackTime">Callback Time:</label><br />
+              <input type="date" id="callbackDate" name="callbackDate" />
+            </div>
+
+            <button id="submitCallbackBtn" class="modalBtn">Submit</button>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <div class="info_container">
+          <h1 class="text-center mb-4">Eye Care</h1>
+          <p>
+            The eyes are often called the windows to the soul, and indeed, they
+            are one of the most important sensory organs in the human body.
+            Proper eye care is essential for maintaining good vision and overall
+            health.
+          </p>
+          <p>
+            Did you know that approximately 80% of vision problems worldwide are
+            avoidable or even curable with proper treatment and care? Regular
+            eye exams, healthy lifestyle choices, and awareness of common eye
+            conditions can help prevent vision loss and maintain optimal eye
+            health.
+          </p>
+          <h2>Common Eye Conditions and Tips for Eye Health:</h2>
+          <p>
+            <strong>1. Myopia (Nearsightedness):</strong> Myopia is a common
+            refractive error that causes distant objects to appear blurry. It
+            can often be corrected with eyeglasses, contact lenses, or
+            refractive surgery. To prevent myopia progression, it's important to
+            take regular breaks from close-up tasks and spend time outdoors.
+          </p>
+          <p>
+            <strong>2. Hyperopia (Farsightedness):</strong> Hyperopia is another
+            refractive error where nearby objects may appear blurry. Eyeglasses,
+            contact lenses, or refractive surgery can help correct hyperopia.
+            Eye exercises and maintaining a healthy diet rich in vitamins and
+            minerals are beneficial for overall eye health.
+          </p>
+          <p>
+            <strong>3. Cataracts:</strong> Cataracts are a common age-related
+            eye condition characterized by clouding of the eye's natural lens,
+            leading to blurry vision and glare sensitivity. Cataract surgery is
+            a safe and effective treatment option to restore clear vision.
+            Protecting your eyes from harmful UV rays by wearing sunglasses and
+            eating a diet rich in antioxidants can help prevent cataracts.
+          </p>
+          <p>
+            <strong>4. Glaucoma:</strong> Glaucoma is a group of eye conditions
+            that damage the optic nerve, often due to high intraocular pressure.
+            Early detection and treatment are crucial to prevent vision loss.
+            Regular eye exams, maintaining healthy blood pressure and
+            cholesterol levels, and avoiding smoking can reduce the risk of
+            developing glaucoma.
+          </p>
+          <p>
+            <strong>5. Age-related Macular Degeneration (AMD):</strong> AMD is a
+            progressive eye condition that affects the macula, leading to
+            central vision loss. While there is no cure for AMD, early detection
+            and lifestyle changes such as eating a diet rich in leafy greens,
+            fruits, and fish can help slow its progression. Quitting smoking and
+            protecting your eyes from UV exposure are also important preventive
+            measures.
+          </p>
+          <p>
+            In addition to these common eye conditions, it's essential to
+            practice good eye hygiene, such as washing your hands before
+            touching your eyes, taking regular breaks from digital screens, and
+            wearing protective eyewear when engaging in sports or activities
+            that pose a risk of eye injury.
+          </p>
+          <p>
+            Stay informed about the latest advancements in eye care, and
+            remember to schedule regular eye exams with your optometrist or
+            ophthalmologist to ensure optimal eye health and vision.
+          </p>
+        </div>
+      </main>
+
+      <footer class="medsite_footer">
+        <div class="info">
+          <p>&copy; 2024 Astana Wellness Center. All rights reserved.</p>
+          <h5>
+            MCS-2201: <br />
+            Gizatov Asylbek and Zhaksybaev Nurtas
+          </h5>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      function emptyPage() {
+        window.location.href = "empty.html";
+      }
+
+      const dropdown = document.querySelector(".dropdown");
+
+      dropdown.addEventListener("click", () => {
+        dropdown.classList.toggle("active");
+      });
+      window.onload = function () {
+        document.querySelector("main").classList.add("show");
+
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("openModalBtn");
+        var span = document.getElementsByClassName("close")[0];
+        var callbackDateInput = document.getElementById("callbackDate");
+        var phoneNumberInput = document.getElementById("phoneNumber");
+        var submitCallbackBtn = document.getElementById("submitCallbackBtn");
+
+        submitCallbackBtn.onclick = function () {
+          if (
+            phoneNumberInput.value.trim() !== "" &&
+            callbackDateInput.value.trim() !== ""
+          ) {
+            alert("Your data has been submitted!");
+            modal.style.display = "none";
+          } else {
+            alert("Please fill in all fields");
+          }
+        };
+
+        btn.onclick = function () {
+          modal.style.display = "block";
+        };
+
+        span.onclick = function () {
+          modal.style.display = "none";
+        };
+
+        calendarIcon.onclick = function () {
+          callbackDateInput.click();
+        };
+
+        callbackDateInput.onchange = function () {
+          var selectedDate = new Date(callbackDateInput.value);
+          var formattedDate = selectedDate.toLocaleDateString("en-GB");
+          callbackTimeInput.placeholder = formattedDate + ", --:--";
+        };
+
+        window.onclick = function (event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        };
+      };
+    </script>
+  </body>
+</html>

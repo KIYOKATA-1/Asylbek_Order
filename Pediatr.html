@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/about.css" />
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Medsite</title>
+  </head>
+  <body>
+    <div class="medsite_container">
+      <header>
+        <span class="logo">
+          <img src="img/logo.png" alt="" /><br />
+          <h3>Astana Wellness Center</h3>
+        </span>
+        <div class="nav-bar">
+          <ul>
+            <li><a href="medsite.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li>
+              <button id="openModalBtn" class="openModalBtn">
+                Request Callback
+              </button>
+            </li>
+            <div class="dropdown">
+              <p>Appointment Online</p>
+              <span class="left-icon"></span>
+              <span class="right-icon"></span>
+              <div class="items">
+                <a href="#" style="--i: 1"><span></span>Adrologist</a>
+                <a href="#" style="--i: 2"><span></span>Endocrinologist</a>
+                <a href="#" style="--i: 3"><span></span>Urologist</a>
+                <a href="#" style="--i: 4"><span></span>Genicologist</a>
+                <a href="#" style="--i: 5"><span></span>Therapist</a>
+              </div>
+            </div>
+          </ul>
+        </div>
+
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Request Callback</h2>
+            <div class="column">
+              <label for="phoneNumber">Phone Number:</label><br />
+              <input
+                type="text"
+                id="phoneNumber"
+                name="phoneNumber"
+                placeholder="+7 (xxx) xxx-xx-xx "
+              />
+            </div>
+
+            <div class="column">
+              <label for="callbackTime">Callback Time:</label><br />
+              <input type="date" id="callbackDate" name="callbackDate" />
+            </div>
+
+            <button id="submitCallbackBtn" class="modalBtn">Submit</button>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <div class="info_container">
+          <h1 class="text-center mb-4">Pediatric Care</h1>
+          <p>
+            At Astana Wellness Center, we understand the unique healthcare needs
+            of children. Our Pediatric Care program is dedicated to providing
+            compassionate and comprehensive medical services for infants,
+            children, and adolescents.
+          </p>
+          <h2>Our Pediatric Services Include:</h2>
+          <p>
+            <strong>Well-Baby and Well-Child Visits:</strong> We offer regular
+            check-ups and developmental screenings to monitor your child's
+            growth and development from infancy through adolescence. These
+            visits are an opportunity to address any concerns, provide
+            vaccinations, and offer guidance on nutrition and safety.
+          </p>
+          <p>
+            <strong>Acute and Chronic Illness Management:</strong> Our
+            pediatricians are trained to diagnose and treat a wide range of
+            acute and chronic conditions affecting children, including
+            respiratory infections, ear infections, asthma, allergies, diabetes,
+            and more. We work closely with families to develop personalized
+            treatment plans and support children in achieving optimal health
+            outcomes.
+          </p>
+          <p>
+            <strong>Immunizations:</strong> We follow the recommended
+            vaccination schedule to protect children against serious infectious
+            diseases. Our team educates parents about the importance of
+            vaccinations and helps ensure that children receive all necessary
+            vaccines for their age.
+          </p>
+          <p>
+            <strong>Growth and Development Monitoring:</strong> We track your
+            child's physical, cognitive, and emotional development over time,
+            identifying any potential concerns early and providing interventions
+            as needed. Our goal is to support healthy growth and development in
+            every child we care for.
+          </p>
+          <p>
+            <strong>Behavioral and Developmental Assessments:</strong> Our
+            pediatricians are trained to evaluate and address behavioral and
+            developmental issues in children, including
+            attention-deficit/hyperactivity disorder (ADHD), autism spectrum
+            disorder (ASD), learning disabilities, and emotional concerns. We
+            offer comprehensive assessments, referrals to specialists, and
+            ongoing support for children and their families.
+          </p>
+          <p>
+            <strong>Nutritional Counseling:</strong> We provide guidance on
+            healthy eating habits, breastfeeding support, and nutritional
+            counseling for children with specific dietary needs or concerns. Our
+            team works with families to promote healthy eating habits and
+            address nutritional deficiencies or challenges.
+          </p>
+          <p>
+            <strong>Injury Prevention and Safety Education:</strong> We offer
+            education and resources to help prevent common childhood injuries
+            and accidents, including car seat safety, water safety, sports
+            safety, and home safety. Our goal is to empower parents and
+            caregivers with the knowledge and tools they need to keep their
+            children safe and healthy.
+          </p>
+          <p>
+            <strong>Parent Education and Support:</strong> We believe in
+            partnering with parents as active participants in their child's
+            healthcare journey. Our pediatricians offer guidance, support, and
+            resources to help parents navigate the challenges of parenthood,
+            from newborn care to adolescence.
+          </p>
+          <p>
+            Whether your child needs a routine check-up, treatment for an
+            illness, or guidance on parenting and child development, our team is
+            here to provide expert care and support every step of the way.
+          </p>
+        </div>
+      </main>
+
+      <footer class="medsite_footer">
+        <div class="info">
+          <p>&copy; 2024 Astana Wellness Center. All rights reserved.</p>
+          <h5>
+            MCS-2201: <br />
+            Gizatov Asylbek and Zhaksybaev Nurtas
+          </h5>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      function emptyPage() {
+        window.location.href = "empty.html";
+      }
+
+      const dropdown = document.querySelector(".dropdown");
+
+      dropdown.addEventListener("click", () => {
+        dropdown.classList.toggle("active");
+      });
+      window.onload = function () {
+        document.querySelector("main").classList.add("show");
+
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("openModalBtn");
+        var span = document.getElementsByClassName("close")[0];
+        var callbackDateInput = document.getElementById("callbackDate");
+        var phoneNumberInput = document.getElementById("phoneNumber");
+        var submitCallbackBtn = document.getElementById("submitCallbackBtn");
+
+        submitCallbackBtn.onclick = function () {
+          if (
+            phoneNumberInput.value.trim() !== "" &&
+            callbackDateInput.value.trim() !== ""
+          ) {
+            alert("Your data has been submitted!");
+            modal.style.display = "none";
+          } else {
+            alert("Please fill in all fields");
+          }
+        };
+
+        btn.onclick = function () {
+          modal.style.display = "block";
+        };
+
+        span.onclick = function () {
+          modal.style.display = "none";
+        };
+
+        calendarIcon.onclick = function () {
+          callbackDateInput.click();
+        };
+
+        callbackDateInput.onchange = function () {
+          var selectedDate = new Date(callbackDateInput.value);
+          var formattedDate = selectedDate.toLocaleDateString("en-GB");
+          callbackTimeInput.placeholder = formattedDate + ", --:--";
+        };
+
+        window.onclick = function (event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        };
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/about.css" />
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Medsite</title>
+  </head>
+  <body>
+    <div class="medsite_container">
+      <header>
+        <span class="logo">
+          <img src="img/logo.png" alt="" /><br />
+          <h3>Astana Wellness Center</h3>
+        </span>
+        <div class="nav-bar">
+          <ul>
+            <li><a href="medsite.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li>
+              <button id="openModalBtn" class="openModalBtn">
+                Request Callback
+              </button>
+            </li>
+            <div class="dropdown">
+              <p>Appointment Online</p>
+              <span class="left-icon"></span>
+              <span class="right-icon"></span>
+              <div class="items">
+                <a href="#" style="--i: 1"><span></span>Adrologist</a>
+                <a href="#" style="--i: 2"><span></span>Endocrinologist</a>
+                <a href="#" style="--i: 3"><span></span>Urologist</a>
+                <a href="#" style="--i: 4"><span></span>Genicologist</a>
+                <a href="#" style="--i: 5"><span></span>Therapist</a>
+              </div>
+            </div>
+          </ul>
+        </div>
+
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Request Callback</h2>
+            <div class="column">
+              <label for="phoneNumber">Phone Number:</label><br />
+              <input
+                type="text"
+                id="phoneNumber"
+                name="phoneNumber"
+                placeholder="+7 (xxx) xxx-xx-xx "
+              />
+            </div>
+
+            <div class="column">
+              <label for="callbackTime">Callback Time:</label><br />
+              <input type="date" id="callbackDate" name="callbackDate" />
+            </div>
+
+            <button id="submitCallbackBtn" class="modalBtn">Submit</button>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <div class="info_container">
+          <h1 class="text-center mb-4">Comprehensive Cardiovascular Care</h1>
+          <p>
+            At Astana Wellness Center, we understand the importance of
+            cardiovascular health and are dedicated to providing comprehensive
+            care for individuals with heart and vascular conditions. Our
+            Comprehensive Cardiovascular Care program offers a wide range of
+            services aimed at preventing, diagnosing, and treating
+            cardiovascular diseases.
+          </p>
+          <p>
+            Our team of cardiologists, cardiovascular surgeons, nurses, and
+            support staff work together to deliver personalized care tailored to
+            each patient's unique needs. Whether you are seeking preventive
+            services, diagnostic testing, or advanced treatment options, we are
+            committed to helping you achieve optimal heart health and overall
+            well-being.
+          </p>
+          <h2>Our Services Include:</h2>
+          <p>
+            <strong>Preventive Cardiology:</strong> Our preventive cardiology
+            program focuses on identifying and managing risk factors for
+            cardiovascular disease, such as high blood pressure, high
+            cholesterol, diabetes, obesity, and smoking. We provide personalized
+            risk assessments, lifestyle counseling, and preventive interventions
+            to help reduce the risk of heart disease and stroke.
+          </p>
+          <p>
+            <strong>Diagnostic Testing:</strong> We offer a comprehensive range
+            of diagnostic tests and imaging studies to evaluate heart and
+            vascular function, including electrocardiography (ECG),
+            echocardiography, stress testing, cardiac catheterization, CT
+            angiography, and MRI scans. These tests help us diagnose heart
+            conditions accurately and develop individualized treatment plans.
+          </p>
+          <p>
+            <strong>Interventional Cardiology:</strong> Our interventional
+            cardiology team performs minimally invasive procedures to treat
+            coronary artery disease, heart valve disorders, and peripheral
+            vascular disease. Procedures include coronary angioplasty and
+            stenting, transcatheter valve replacement, and peripheral artery
+            interventions. These advanced techniques offer less pain, shorter
+            recovery times, and improved outcomes compared to traditional
+            open-heart surgery.
+          </p>
+          <p>
+            <strong>Cardiac Surgery:</strong> For patients requiring surgical
+            intervention, our cardiovascular surgeons specialize in a wide range
+            of procedures, including coronary artery bypass grafting (CABG),
+            heart valve repair or replacement, atrial fibrillation surgery, and
+            aortic aneurysm repair. Our state-of-the-art operating rooms and
+            experienced surgical teams ensure the highest quality of care and
+            outcomes for our patients.
+          </p>
+          <p>
+            <strong>Heart Failure Management:</strong> Our heart failure program
+            offers comprehensive care for patients with heart failure, including
+            medical management, lifestyle modifications, device therapy (such as
+            pacemakers and implantable cardioverter-defibrillators), and heart
+            transplantation evaluation and coordination. Our goal is to optimize
+            quality of life and improve outcomes for patients living with heart
+            failure.
+          </p>
+          <p>
+            <strong>Cardiac Rehabilitation:</strong> Our cardiac rehabilitation
+            program provides supervised exercise training, education, and
+            support for patients recovering from heart surgery or experiencing
+            cardiovascular conditions. Our multidisciplinary team helps patients
+            regain strength, improve cardiovascular fitness, and adopt
+            heart-healthy lifestyles to prevent future cardiac events.
+          </p>
+          <p>
+            <strong>Vascular Surgery:</strong> Our vascular surgeons specialize
+            in treating conditions affecting the arteries and veins, including
+            peripheral artery disease, carotid artery disease, abdominal aortic
+            aneurysms, and venous disorders. We offer minimally invasive
+            endovascular procedures as well as open surgical techniques to
+            restore blood flow and prevent complications associated with
+            vascular disease.
+          </p>
+          <p>
+            <strong>Electrophysiology:</strong> Our electrophysiology program
+            focuses on diagnosing and treating heart rhythm disorders
+            (arrhythmias) using advanced mapping and ablation techniques,
+            implantable cardiac devices (such as pacemakers and defibrillators),
+            and cardiac resynchronization therapy. Our electrophysiologists
+            specialize in managing complex arrhythmias and offer innovative
+            treatment options to improve heart rhythm control and quality of
+            life.
+          </p>
+          <p>
+            <strong>Cardiovascular Research:</strong> As a leading academic
+            medical center, we are actively involved in cardiovascular research
+            and innovation. Our research programs aim to advance the
+            understanding of heart and vascular diseases, develop new treatment
+            strategies, and improve outcomes for patients. We participate in
+            clinical trials and collaborate with national and international
+            partners to translate scientific discoveries into clinical practice.
+          </p>
+          <p>
+            Whether you are seeking preventive care, diagnostic evaluation, or
+            advanced treatment options for cardiovascular conditions, our team
+            is here to provide compassionate care and support every step of the
+            way. Your heart health is our top priority, and we are committed to
+            helping you achieve a healthier, happier life.
+          </p>
+        </div>
+      </main>
+
+      <footer class="medsite_footer">
+        <div class="info">
+          <p>&copy; 2024 Astana Wellness Center. All rights reserved.</p>
+          <h5>
+            MCS-2201: <br />
+            Gizatov Asylbek and Zhaksybaev Nurtas
+          </h5>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      function emptyPage() {
+        window.location.href = "empty.html";
+      }
+
+      const dropdown = document.querySelector(".dropdown");
+
+      dropdown.addEventListener("click", () => {
+        dropdown.classList.toggle("active");
+      });
+      window.onload = function () {
+        document.querySelector("main").classList.add("show");
+
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("openModalBtn");
+        var span = document.getElementsByClassName("close")[0];
+        var callbackDateInput = document.getElementById("callbackDate");
+        var phoneNumberInput = document.getElementById("phoneNumber");
+        var submitCallbackBtn = document.getElementById("submitCallbackBtn");
+
+        submitCallbackBtn.onclick = function () {
+          if (
+            phoneNumberInput.value.trim() !== "" &&
+            callbackDateInput.value.trim() !== ""
+          ) {
+            alert("Your data has been submitted!");
+            modal.style.display = "none";
+          } else {
+            alert("Please fill in all fields");
+          }
+        };
+
+        btn.onclick = function () {
+          modal.style.display = "block";
+        };
+
+        span.onclick = function () {
+          modal.style.display = "none";
+        };
+
+        calendarIcon.onclick = function () {
+          callbackDateInput.click();
+        };
+
+        callbackDateInput.onchange = function () {
+          var selectedDate = new Date(callbackDateInput.value);
+          var formattedDate = selectedDate.toLocaleDateString("en-GB");
+          callbackTimeInput.placeholder = formattedDate + ", --:--";
+        };
+
+        window.onclick = function (event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        };
+      };
+    </script>
+  </body>
+</html>

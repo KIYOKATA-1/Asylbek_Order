@@ -1,0 +1,370 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+     overflow: auto;
+     background-image: url('/img/awc.png');
+     background-repeat: no-repeat;
+     background-size: cover;
+     scroll-behavior: smooth;
+     filter: contrast(2);
+}
+.medsite_container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header{
+    background: #006B3C;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    margin-bottom: 10%;
+}
+
+
+header .logo img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    margin-left: 65px;
+    background-size: cover;
+}
+
+header .logo h3 {
+    margin-left: 10px;
+    color: white; 
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+}
+
+header .nav-bar{
+    position: absolute;
+    margin-left: 15%;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+}
+
+header .nav-bar ul{
+    display: flex;
+    list-style: none;
+}
+
+header .nav-bar li{
+    margin-right: 15px;
+    align-items: baseline;
+}
+
+header .nav-bar a{
+    text-decoration: none;
+    color: white; 
+    font-size: 20px;
+}
+
+header .openModalBtn{
+    border: none;
+    width: 120px;
+    height: 25px;
+    border-radius: 10px;
+    font-size: 12px;
+    background: white;
+    color: #006B3C;
+    transition: .3s ease-in;
+    font-weight: 600;
+}
+header .openModalBtn:hover{
+    transform: scale(0.96);
+}
+
+header .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+}
+
+header .modal-content {
+    background-color: rgba(0, 0, 0, 0.686);
+    margin: 10% auto;
+    padding: 20px;
+    color: white;
+    height: 250px;
+    display: flexbox;
+    border-radius: 12px;
+    width: 80%;
+    position: relative;
+}
+
+header .modal-content .column{
+    padding-top: 20px;
+    padding-bottom: 50px;
+    font-family: "Roboto Condensed", sans-serif;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+header .modal-content h2{
+    font-family: "Exo 2", sans-serif;
+    font-weight: 600;
+    margin-left: 50px;
+}
+
+header .modal-content .column input{
+    width: 200px;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    padding-left: 15px;
+    margin-left: 25px;
+}
+
+header .modal-content .modalBtn{
+    position: absolute;
+    bottom: 25px;
+    margin-left: 60px;
+    width: 150px;
+    font-size: 18px;
+    height: 25px;
+    border: none;
+
+}
+
+header .close {
+    color: #aaa;
+    float: right;
+    position: absolute;
+    justify-self: center;
+    align-self: center;
+    right: 40px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+header .close:hover,
+header .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+header .dropdown {
+    position: absolute;
+    left: 40vw;
+    width: 200px;
+    height: 30px;
+    background: white;
+    bottom: 1%;
+    color: #000;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+header .dropdown .left-icon,
+header .dropdown .right-icon {
+    position: relative;
+    display: inline-block;
+    width: 10px;
+    height: 5px;
+    background: #006B3C;
+    border-radius: 40px;
+    transition: .5s;
+}
+
+header .dropdown .left-icon {
+    left: 7px;
+    transform: rotate(45deg);
+}
+
+header .dropdown.active .left-icon {
+    transform: rotate(135deg);
+}
+
+header .dropdown .right-icon {
+    transform: rotate(-45deg);
+}
+
+header .dropdown.active .right-icon {
+    transform: rotate(-135deg);
+}
+
+header .dropdown .items {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: auto;
+    margin-top: 33px;
+    overflow: hidden;
+    visibility: hidden;
+    transition: .5s;
+}
+
+header .dropdown.active .items {
+    visibility: visible;
+}
+
+header .dropdown .items a {
+    position: relative;
+    left: 100%;
+    display: flex;
+    font-size: 20px;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 10px 15px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+    transition-delay: calc(60ms * var(--i));
+}
+
+header .dropdown.active .items a {
+    left: 0;
+}
+
+header .dropdown .items a:hover {
+    color: #fff;
+}
+
+header .dropdown .items a span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: green;
+    z-index: -1;
+    border-radius: inherit;
+    transform: rotate(160deg);
+    transform-origin: right;
+    transition: .5s;
+}
+
+header .dropdown .items a:hover span {
+    transform: rotate(0deg);
+}
+
+
+  
+  main.show {
+    opacity: 1; 
+  }
+main{
+    display: flex;
+    position: relative;
+    height: auto;
+    justify-content: center;
+    opacity: 0; 
+    top: -10%;
+    transition: opacity 1.3s ease-in-out; 
+}
+
+
+main .info_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #ffffff96;
+    border-radius: 12px;
+    text-align: center;
+    height: 100%;
+    width: 85%;
+}
+main .info_container h1{
+    font-size: 30px;
+    font-weight: 700;
+    font-family: "Ubuntu", sans-serif;
+}
+
+main .info_container ul li{
+    font-size: 16px;
+    padding-bottom: 10px;
+    font-family: "Roboto Condensed", sans-serif;
+
+}
+main .info_container ul{
+    list-style:circle;
+    padding-top: 10px;
+    text-align: left;
+    align-self: center;
+}
+
+main .info_container .text1{
+    text-align: center;
+    align-self: center;
+    width: 75%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-style: italic;
+    font-family: "Roboto Condensed", sans-serif;
+
+    font-weight: 500;
+    font-size: 18px;
+}
+
+main .info_container .text2{
+    font-size: 25px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+}
+main .info_container .text3{
+    font-size: 21px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-style: oblique;
+    font-weight: 700;
+}
+
+
+  footer {
+    background: #006B3C;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+
+  }
+
+  
+
+  footer .info{
+    text-align: center;
+    height: 100px;
+    color: snow;
+    align-items: center;
+    display: flexbox;
+    font-family: "Ubuntu", sans-serif;
+
+  }
+
+  footer .info p{
+    padding-bottom: 20px;
+  }
+
